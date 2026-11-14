@@ -215,6 +215,31 @@ footer a{color:var(--cream)}
 .fab{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;background:var(--wine);color:var(--cream);display:grid;place-items:center;box-shadow:0 8px 24px rgba(59,19,33,.35);border:2px solid var(--cream)}
 .fab svg{width:26px;height:26px}
 .fab:hover{background:var(--wine-deep)}
+
+/* ajustes para celular */
+@media (max-width:860px){
+  section{padding:56px 0}
+  header{background:var(--cream);backdrop-filter:none}
+  .hero{padding:28px 0 48px}
+  .hero .wrap{gap:26px}
+  .hero .arch{order:-1;max-width:270px;aspect-ratio:1/1.15;box-shadow:0 0 0 8px rgba(255,255,255,.6)}
+  .hero h1{font-size:2.1rem;margin-bottom:16px}
+  .hero-text{text-align:center}
+  .hero .eyebrow{letter-spacing:.16em;font-size:.68rem}
+  .lead{margin:0 auto;font-size:1.02rem}
+  .cta{justify-content:center;margin-top:22px}
+  .cta .btn{width:100%;justify-content:center}
+  .facts{justify-content:center;gap:14px 28px;margin-top:26px;text-align:center}
+  .sobre .wrap{gap:28px}
+  .sobre .arch{order:2;max-width:300px;margin:0 auto;width:100%}
+  .head{margin-bottom:30px;gap:14px}
+  .faixa{padding:44px 0}
+  .contato{padding:64px 0 96px}
+  .fab{width:50px;height:50px;right:14px;bottom:14px}
+  .fab svg{width:23px;height:23px}
+  footer .wrap{flex-direction:column;align-items:flex-start;gap:12px}
+  footer{padding-bottom:84px}
+}
 </style>
 </head>
 <body>
@@ -222,6 +247,7 @@ footer a{color:var(--cream)}
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="wa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 3a9 9 0 0 0-7.700 13.600L3 21l4.500-1.200A9 9 0 1 0 12 3z"/><path fill="currentColor" d="M9.300 7.800c.300 0 .500 0 .700.500l.700 1.700c.100.200 0 .400-.100.600l-.500.700c-.100.200-.100.300 0 .500a6 6 0 0 0 2.600 2.300c.200.100.400.100.500-.100l.700-.800c.200-.200.400-.200.600-.100l1.600.800c.300.100.400.300.400.500 0 .900-.900 1.700-1.800 1.700-3.500 0-7-3.500-7-6.600 0-.900.700-1.700 1.600-1.700z"/></symbol>
   <symbol id="ig" viewBox="0 0 24 24"><rect x="3.500" y="3.500" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.600"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.600"/><circle cx="17.200" cy="6.800" r="1.100" fill="currentColor"/></symbol>
+  <symbol id="cal" viewBox="0 0 24 24"><rect x="3.500" y="5" width="17" height="15.500" rx="3" fill="none" stroke="currentColor" stroke-width="1.600"/><path d="M3.500 10h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.600" stroke-linecap="round"/></symbol>
 </svg>
 
 <header>
@@ -239,7 +265,7 @@ footer a{color:var(--cream)}
       <a href="#duvidas">Dúvidas</a>
       <a href="#locais">Onde atendo</a>
     </nav>
-    <a class="btn" href="https://wa.me/558132995642?text=Ol%C3%A1%2C%20Gabriella!%20Gostaria%20de%20agendar%20uma%20consulta." aria-label="Agendar pelo WhatsApp"><svg><use href="#wa"/></svg><span>Agendar</span></a>
+    <a class="btn" href="https://consultorio.me/pro/maria-gabriella-de-melo" aria-label="Agendar online"><svg><use href="#cal"/></svg><span>Agendar</span></a>
   </div>
 </header>
 
@@ -252,8 +278,8 @@ footer a{color:var(--cream)}
       <h1>Cuidado, acolhimento e <span class="script">saúde feminina</span> em cada fase da sua vida.</h1>
       <p class="lead">Consulta ginecológica, pré-natal, DIU, Implanon, preventivo e rastreamento de HPV e ISTs, em um atendimento humanizado, acolhedor e baseado em evidências.</p>
       <div class="cta">
-        <a class="btn" href="https://wa.me/558132995642?text=Ol%C3%A1%2C%20Gabriella!%20Gostaria%20de%20agendar%20uma%20consulta."><svg><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
-        <a class="btn ghost" href="#atuacao">Ver serviços</a>
+        <a class="btn" href="https://consultorio.me/pro/maria-gabriella-de-melo"><svg><use href="#cal"/></svg>Agendar online</a>
+        <a class="btn ghost" href="https://wa.me/5581997477759?text=Ol%C3%A1%2C%20Gabriella!%20Gostaria%20de%20agendar%20uma%20consulta."><svg><use href="#wa"/></svg>Falar no WhatsApp</a>
       </div>
       <div class="facts">
         <span><b>Residência HC/UFPE</b>Saúde da Mulher, ênfase em Obstetrícia</span>
@@ -411,7 +437,7 @@ footer a{color:var(--cream)}
   <div class="wrap">
     <div class="head"><div><span class="eyebrow">Como funciona</span><h2>Do agendamento ao <span class="script">acompanhamento</span></h2></div></div>
     <ol class="steps">
-      <li><h3>Agendamento</h3><p>Você me chama no WhatsApp, conta o que precisa e escolhemos o melhor dia e local.</p></li>
+      <li><h3>Agendamento</h3><p>Você escolhe o horário na agenda online e recebe a confirmação. Se preferir, me chama no WhatsApp.</p></li>
       <li><h3>Consulta</h3><p>Conversamos sobre seu histórico e suas queixas e faço a avaliação com calma.</p></li>
       <li><h3>Plano de cuidado</h3><p>Você sai sabendo o que foi feito, o que vem a seguir e como se cuidar em casa.</p></li>
       <li><h3>Acompanhamento</h3><p>Sigo com você nos retornos, nos resultados dos exames e na adaptação ao método escolhido.</p></li>
@@ -444,7 +470,7 @@ footer a{color:var(--cream)}
     <div>
       <details open>
         <summary>Como faço para agendar?</summary>
-        <p>Pelo WhatsApp (81) 3299-5642. Informe o atendimento que procura e o local de sua preferência, e eu envio os horários disponíveis.</p>
+        <p>Pela <a href="https://consultorio.me/pro/maria-gabriella-de-melo">agenda online</a>, onde você escolhe o dia e o horário. Se tiver dúvidas antes de marcar, fale comigo pelo WhatsApp (81) 99747-7759.</p>
       </details>
       <details>
         <summary>Onde vejo os valores?</summary>
@@ -499,10 +525,11 @@ footer a{color:var(--cream)}
     <h2>Seu bem-estar é minha <span class="script">prioridade</span></h2>
     <p>Estou à disposição para esclarecer dúvidas e verificar a disponibilidade de horários.</p>
     <div class="cta">
-      <a class="btn" href="https://wa.me/558132995642?text=Ol%C3%A1%2C%20Gabriella!%20Gostaria%20de%20agendar%20uma%20consulta."><svg><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+      <a class="btn" href="https://consultorio.me/pro/maria-gabriella-de-melo"><svg><use href="#cal"/></svg>Agendar online</a>
+        <a class="btn ghost" href="https://wa.me/5581997477759?text=Ol%C3%A1%2C%20Gabriella!%20Gostaria%20de%20agendar%20uma%20consulta."><svg><use href="#wa"/></svg>Falar no WhatsApp</a>
       <a class="btn ghost" href="https://www.instagram.com/gabriellameloenf/"><svg><use href="#ig"/></svg>@gabriellameloenf</a>
     </div>
-    <p class="tel">WhatsApp <b>(81) 3299-5642</b></p>
+    <p class="tel">WhatsApp <b>(81) 99747-7759</b></p>
   </div>
 </section>
 
@@ -511,12 +538,12 @@ footer a{color:var(--cream)}
 <footer>
   <div class="wrap">
     <div><b>Gabriella Melo</b>Enfermeira ginecologista e obstetra · Coren-PE 750898-ENF</div>
-    <div>Carpina, PE · <a href="https://www.instagram.com/gabriellameloenf/">Instagram</a> · (81) 3299-5642</div>
+    <div>Carpina, PE · <a href="https://www.instagram.com/gabriellameloenf/">Instagram</a> · (81) 99747-7759</div>
     <div>© 2026 Gabriella Melo</div>
   </div>
 </footer>
 
-<a class="fab" href="https://wa.me/558132995642?text=Ol%C3%A1%2C%20Gabriella!%20Gostaria%20de%20agendar%20uma%20consulta." aria-label="Agendar pelo WhatsApp"><svg><use href="#wa"/></svg></a>
+<a class="fab" href="https://wa.me/5581997477759?text=Ol%C3%A1%2C%20Gabriella!%20Gostaria%20de%20agendar%20uma%20consulta." aria-label="Falar no WhatsApp"><svg><use href="#wa"/></svg></a>
 
 </body>
 </html>
